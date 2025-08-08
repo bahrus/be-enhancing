@@ -1,0 +1,20 @@
+{
+  "name": "be-enhancing",
+  "version": "0.0.0",
+  "description": "Enhance a remote element and pull in a reference to the enhancement or a key property of the enhancement",
+  "homepage": "https://github.com/bahrus/be-enhancing#readme",
+  "bugs": {
+    "url": "https://github.com/bahrus/be-enhancing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrus/be-enhancing.git"
+  },
+  "license": "MIT",
+  "author": "Bruce B Anderson (anderson.bruce.b@gmail.com)",
+  "type": "module",
+  "main": "be-enhancing.js",
+  "scripts": {
+    "test": "playwright test"
+  }
+}
