@@ -1,6 +1,6 @@
 {
   "name": "be-enhancing",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enhance a remote element and pull in a reference to the enhancement or a key property of the enhancement",
   "homepage": "https://github.com/bahrus/be-enhancing#readme",
   "bugs": {
