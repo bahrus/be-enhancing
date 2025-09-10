@@ -39,7 +39,7 @@ class BeEnhancing extends BE {
         for(const parsedStatement of parsedStatements){
             const {localSpecifier, remoteSpecifier, remotePropertyPath, enhancementBase} = parsedStatement;
             const remoteEl = await find(enhancedElement, remoteSpecifier);
-            if(!remoteEl) throw 404;
+            if(!(remoteEl instanceof Element)) throw 404;
             
             const enhancement = await whenResolved(remoteEl, enhancementBase);
             const {path} = localSpecifier;
