@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.55.0",
-    "ssi-server": "0.0.1"
+    "ssi-server": "0.0.1",
+    "folder-picker": "0.0.3"
   }
 }
