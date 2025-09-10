@@ -42,13 +42,18 @@ class BeEnhancing extends BE {
             if(!(remoteEl instanceof Element)) throw 404;
             
             const enhancement = await whenResolved(remoteEl, enhancementBase);
-            const {path} = localSpecifier;
-            if(path === undefined) continue;
+            let {prop, ish} = localSpecifier;
+            if(prop === undefined) continue;
+            let destObj = enhancedElement;
+            if(ish){
+                const {waitForIsh} = await import('mount-observer/waitForIsh.js');
+                destObj = await waitForIsh(enhancedElement)
+            }
             if(remotePropertyPath === undefined){
-                (await import('trans-render/lib/setProp.js')).setProp(enhancedElement, path, enhancement);
+                (await import('trans-render/lib/setProp.js')).setProp(enhancedElement, prop, enhancement);
             }else{
                 new (await import('trans-render/asmr/BeLinked.js')).BeLinked(
-                    enhancement, remotePropertyPath, enhancedElement, path
+                    enhancement, remotePropertyPath, destObj, prop
                 );
 
             }

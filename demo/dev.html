@@ -7,7 +7,7 @@
     <!-- #include virtual="/imports.html" -->
 </head>
 <body>
-    <button id=dirPick disabled 📁⛏️>Pick directory</button>
+    <button id=dirPick disabled>Pick directory</button>
     <details itemscope=dir
         be-enhancing="#dirPick with 📁⛏️ and set $0+ish?.handle to directoryHandle."
     >
@@ -15,6 +15,7 @@
     </details>
     <script type=module>
         import 'folder-picker/📁⛏️.js';
+        import '/emc.js';
         import { regIsh } from 'mount-observer/refid/regIsh.js';
         regIsh(document.body, 'dir', class {
             set handle(val){
